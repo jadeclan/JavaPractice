@@ -63,6 +63,19 @@ public class ChapterTwo extends JFrame {
 		});
 		btnGuessGame.setBounds(29, 91, 127, 25);
 		contentPane.add(btnGuessGame);
+		
+		JButton btnNewButton = new JButton("Drum Kit");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				DrumKit drum= new DrumKit();
+				drum.startDrum();
+				drum.setSnare(false);
+				drum.playTopHat();
+			}
+		});
+		btnNewButton.setBounds(29, 150, 127, 25);
+		contentPane.add(btnNewButton);
 	}
 
 }
