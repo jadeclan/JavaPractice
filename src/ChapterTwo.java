@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -6,11 +5,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+@SuppressWarnings("serial")
 public class ChapterTwo extends JFrame {
 
 	private JPanel contentPane;
@@ -54,6 +57,9 @@ public class ChapterTwo extends JFrame {
 		contentPane.add(lblChapterTwoExercises);
 		
 		JButton btnGuessGame = new JButton("Guess Game");
+		btnGuessGame.setFont(new Font("Tahoma", Font.BOLD, 14));
+		Image img = new ImageIcon(this.getClass().getResource("/Help-icon.png")).getImage();
+		btnGuessGame.setIcon(new ImageIcon(img));
 		btnGuessGame.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -61,10 +67,13 @@ public class ChapterTwo extends JFrame {
 				game.startGame();
 			}
 		});
-		btnGuessGame.setBounds(29, 91, 127, 25);
+		btnGuessGame.setBounds(29, 91, 158, 59);
 		contentPane.add(btnGuessGame);
 		
 		JButton btnNewButton = new JButton("Drum Kit");
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 14));
+		Image img2 = new ImageIcon(this.getClass().getResource("/Drum-icon.png")).getImage();
+		btnNewButton.setIcon(new ImageIcon(img2));
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -74,7 +83,7 @@ public class ChapterTwo extends JFrame {
 				drum.playTopHat();
 			}
 		});
-		btnNewButton.setBounds(29, 150, 127, 25);
+		btnNewButton.setBounds(243, 91, 158, 59);
 		contentPane.add(btnNewButton);
 	}
 
