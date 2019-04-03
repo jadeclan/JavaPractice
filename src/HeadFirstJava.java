@@ -56,8 +56,8 @@ public class HeadFirstJava {
 		lblChapterExercises.setBounds(133, 62, 195, 15);
 		frame.getContentPane().add(lblChapterExercises);
 		
-		JButton btnChapter = new JButton("Chapter 2");
-		btnChapter.addMouseListener(new MouseAdapter() {
+		JButton btnChapter2 = new JButton("Chapter 2");
+		btnChapter2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.dispose();
@@ -65,7 +65,19 @@ public class HeadFirstJava {
 				secondChapter.setVisible(true);
 			}
 		});
-		btnChapter.setBounds(35, 93, 117, 25);
-		frame.getContentPane().add(btnChapter);
+		btnChapter2.setBounds(35, 93, 117, 25);
+		frame.getContentPane().add(btnChapter2);
+		
+		JButton btnChapter5 = new JButton("Chapter 5");
+		btnChapter5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				frame.dispose();
+				ChapterFive fifthChapter = new ChapterFive();
+				fifthChapter.setVisible(true);
+			}
+		});
+		btnChapter5.setBounds(240, 94, 117, 23);
+		frame.getContentPane().add(btnChapter5);
 	}
 }
