@@ -61,24 +61,10 @@ public class ChapterFive extends JFrame {
 		btnNewButton.setIcon(new ImageIcon(img2));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int numberOfGuesses=0;
-				BattleShipsHelper helper=new BattleShipsHelper();
-				SimpleBattleShips battleShips = new SimpleBattleShips();
-				int randomNum = (int) (Math.random()*5);
-				int [] locations = {randomNum, randomNum+1, randomNum+2};
-				battleShips.setLocationCells(locations);
-				boolean isAlive=true;
-				while(isAlive){
-					String guess = helper.getUserInput("Enter a number:");
-					String result = battleShips.checkStatus(guess);
-					numberOfGuesses ++;
-					if(result.contentEquals("kill")) {
-						isAlive = false;
-						System.out.println("You took " + numberOfGuesses + " guesses.");
-						revalidate();
-					}
-				}
+				BattleShips5 game = new BattleShips5();
+				game.setVisible(true);
 			}
+			
 		});
 		btnNewButton.setBounds(58, 74, 222, 57);
 		contentPane.add(btnNewButton);

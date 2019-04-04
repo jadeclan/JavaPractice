@@ -14,7 +14,6 @@ public class SimpleBattleShips {
 			}
 		}
 		if(numberOfHits == locationCells.length) { result = "kill"; }
-		System.out.println(result);
 		return result;
 	}
 	public int[] getLocationCells() {
